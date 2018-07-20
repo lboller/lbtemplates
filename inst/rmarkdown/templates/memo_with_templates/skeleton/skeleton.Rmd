@@ -1,0 +1,39 @@
+---
+title: "Title"
+output:
+  bookdown::html_document2:
+    df_print: paged
+  bookdown::pdf_document2:
+    fig_caption: yes
+    # keep_tex: yes
+    includes:
+      in_header: preamble.tex
+  bookdown::word_document2:
+    reference_docx: template.docx
+toc: no
+---
+
+```{r setup, include = FALSE}
+  is_html_output = function() {
+  knitr::opts_knit("rmarkdown.pandoc.to") == "html"
+}
+knitr::opts_chunk$set(
+  autodep = TRUE,
+  comment = "#>",
+  echo = FALSE,
+  fig.pos = "H",
+  message = FALSE,
+  warning = FALSE
+)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+## Adding an RMarkdown Template
+
+This file is what a user will see when they select your template. Make sure that you update the fields in the yaml header. In particular you will want to update the `output` field to whatever format your template requires.
+
+This is a good place to demonstrate special features that your template provides. Ideally it should knit out-of-the-box, or at least contain clear instructions as to what needs changing.
+
+Finally, be sure to remove this message!
