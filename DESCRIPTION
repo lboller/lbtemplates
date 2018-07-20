@@ -1,0 +1,13 @@
+Package: lbtemplates
+Type: Package
+Title: Custom RMarkdown Templates for Personal Use
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/lboller/lbtemplates
+BugReports: https://github.com/lboller/lbtemplates/issues
