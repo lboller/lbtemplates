@@ -13,7 +13,13 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
-pdf_memo = function(toc = FALSE) {
+#' PDF Memo
+#'
+#' @param toc
+#'
+#' @return
+#' @export
+pdf_memo = function(toc = FALSE, ...) {
   # locations of resource files in the package
   pkg_resource = function(...) {
     system.file(..., package = "lbtemplates")
@@ -27,7 +33,9 @@ pdf_memo = function(toc = FALSE) {
     fig_width = 6.5,
     fig_height = 4,
     fig_caption = TRUE,
-    includes = rmarkdown::includes(in_header = preamble)
+    includes = rmarkdown::includes(in_header = preamble),
+    number_sections = FALSE,
+    ...
   )
 }
 
