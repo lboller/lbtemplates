@@ -1,0 +1,4 @@
+Name: Insert Subscript
+Description: Insert subscript for LaTeX notation
+Binding: subscript
+Interactive: false

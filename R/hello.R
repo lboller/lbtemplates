@@ -56,3 +56,55 @@ word_memo = function(toc = FALSE) {
     reference_docx = template
   )
 }
+
+word_memo_numbers = function(toc = FALSE) {
+  # locations of resource files in the package
+  pkg_resource = function(...) {
+    system.file(..., package = "lbtemplates")
+  }
+
+  template = pkg_resource("rmarkdown/templates/memo_with_templates/skeleton/template_numbers.docx")
+
+  # call the base html_document function
+  bookdown::word_document2(
+    toc = toc,
+    fig_width = 6.5,
+    fig_height = 4,
+    fig_caption = TRUE,
+    reference_docx = template
+  )
+}
+
+paper = function(toc = FALSE) {
+  # locations of resource files in the package
+  pkg_resource = function(...) {
+    system.file(..., package = "lbtemplates")
+  }
+
+  template = pkg_resource("rmarkdown/templates/memo_with_templates/skeleton/paper.docx")
+
+  # call the base html_document function
+  bookdown::word_document2(
+    toc = toc,
+    fig_width = 6.5,
+    fig_height = 4,
+    fig_caption = TRUE,
+    reference_docx = template
+  )
+}
+
+#' Subscript
+#'
+#' @param text Text to insert
+#'
+#' @return
+#' @export
+subscript = function(text = "_") {
+  rstudioapi::insertText(paste0(text, "{}"))
+  temp <- rstudioapi::getSourceEditorContext()$selection[[1]]$range
+  go_to <- rstudioapi::document_range(
+    c(temp$start[[1]],temp$start[[2]] - 1), c(temp$end[[1]],temp$end[[2]] - 1)
+  )
+  rstudioapi::setSelectionRanges(go_to)
+}
+
