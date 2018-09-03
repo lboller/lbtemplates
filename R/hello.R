@@ -39,6 +39,12 @@ pdf_memo = function(toc = FALSE, ...) {
   )
 }
 
+#' Word Memo
+#'
+#' @param toc
+#'
+#' @return
+#' @export
 word_memo = function(toc = FALSE) {
   # locations of resource files in the package
   pkg_resource = function(...) {
@@ -57,6 +63,12 @@ word_memo = function(toc = FALSE) {
   )
 }
 
+#' Word Memo w/ Numbers
+#'
+#' @param toc
+#'
+#' @return
+#' @export
 word_memo_numbers = function(toc = FALSE) {
   # locations of resource files in the package
   pkg_resource = function(...) {
@@ -75,7 +87,13 @@ word_memo_numbers = function(toc = FALSE) {
   )
 }
 
-paper = function(toc = FALSE) {
+#' Word Paper
+#'
+#' @param toc
+#'
+#' @return
+#' @export
+word_paper = function(toc = FALSE) {
   # locations of resource files in the package
   pkg_resource = function(...) {
     system.file(..., package = "lbtemplates")
