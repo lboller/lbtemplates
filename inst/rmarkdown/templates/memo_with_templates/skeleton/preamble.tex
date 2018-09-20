@@ -4,9 +4,12 @@
 \usepackage{listings}
 \usepackage{soul}
 % \usepackage{fontspec}
-\usepackage{hyperref}
-\usepackage[utf8]{inputenc}
+% \usepackage{cleveref}
+% \usepackage{hyperref}
+% \usepackage[utf8]{inputenc}
 % \usepackage{float}
+\usepackage{mathtools}
+\mathtoolsset{showonlyrefs,showmanualtags}
 \let\origfigure\figure
 \let\endorigfigure\endfigure
 \renewenvironment{figure}[1][2] {
@@ -14,6 +17,8 @@
 } {
     \endorigfigure
 }
+\let\[\equation
+\let\]\endequation
 \usepackage{floatrow}
 \floatsetup[figure]{capposition=top}
 \floatsetup[table]{capposition=top}

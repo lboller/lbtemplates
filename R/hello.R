@@ -45,7 +45,7 @@ pdf_memo = function(toc = FALSE, ...) {
 #'
 #' @return
 #' @export
-word_memo = function(toc = FALSE) {
+word_memo = function(toc = FALSE, ...) {
   # locations of resource files in the package
   pkg_resource = function(...) {
     system.file(..., package = "lbtemplates")
