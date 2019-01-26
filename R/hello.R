@@ -19,7 +19,7 @@
 #'
 #' @return
 #' @export
-pdf_memo = function(toc = FALSE, ...) {
+pdf_memo = function(toc = FALSE, number_sections = TRUE, ...) {
   # locations of resource files in the package
   pkg_resource = function(...) {
     system.file(..., package = "lbtemplates")
@@ -34,7 +34,9 @@ pdf_memo = function(toc = FALSE, ...) {
     fig_height = 4,
     fig_caption = TRUE,
     includes = rmarkdown::includes(in_header = preamble),
-    number_sections = FALSE,
+    number_sections = number_sections,
+    latex_engine = "xelatex",
+    template = system.file("rmarkdown/templates/memo_with_templates/default.tex", package = "lbtemplates"),
     ...
   )
 }
@@ -126,3 +128,17 @@ subscript = function(text = "_") {
   rstudioapi::setSelectionRanges(go_to)
 }
 
+#' Subscript
+#'
+#' @param text Text to insert
+#'
+#' @return
+#' @export
+superscript = function(text = "^") {
+  rstudioapi::insertText(paste0(text, "{}"))
+  temp <- rstudioapi::getSourceEditorContext()$selection[[1]]$range
+  go_to <- rstudioapi::document_range(
+    c(temp$start[[1]],temp$start[[2]] - 1), c(temp$end[[1]],temp$end[[2]] - 1)
+  )
+  rstudioapi::setSelectionRanges(go_to)
+}

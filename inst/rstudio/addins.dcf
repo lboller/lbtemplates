@@ -2,3 +2,8 @@ Name: Insert Subscript
 Description: Insert subscript for LaTeX notation
 Binding: subscript
 Interactive: false
+
+Name: Insert Superscript
+Description: Insert subscript for LaTeX notation
+Binding: superscript
+Interactive: false

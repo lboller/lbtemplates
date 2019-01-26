@@ -5,7 +5,6 @@ output:
     df_print: paged
   bookdown::pdf_document2:
     fig_caption: yes
-    # keep_tex: yes
     includes:
       in_header: preamble.tex
   bookdown::word_document2:
