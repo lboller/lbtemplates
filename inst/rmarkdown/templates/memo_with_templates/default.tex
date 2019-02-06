@@ -12,8 +12,6 @@ $else$
 % \usepackage{amssymb}
 % \usepackage{microtype}
 %%% Add headers
-\usepackage{fancyhdr}
-\pagestyle{fancy}
 % \fancyhf{}
 $endif$
 $if(linestretch)$
@@ -70,6 +68,8 @@ $if(lang)$
   \usepackage[shorthands=off,$lang$]{babel}
 \fi
 $endif$
+\usepackage{fancyhdr}
+\pagestyle{fancy}
 $if(natbib)$
 \usepackage{natbib}
 \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
