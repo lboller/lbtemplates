@@ -26,9 +26,9 @@
 \usepackage{floatrow}
 \floatsetup[figure]{capposition=top}
 \floatsetup[table]{capposition=top}
-\makeatletter % undo the wrong changes made by mathspec
-\let\RequirePackage\original@RequirePackage
-\let\usepackage\RequirePackage
+% \makeatletter % undo the wrong changes made by mathspec
+% \let\RequirePackage\original@RequirePackage
+% \let\usepackage\RequirePackage
 \makeatother
 \DeclareMathOperator*{\argmin}{argmin}
 \linespread{1.3}
