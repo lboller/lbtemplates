@@ -71,6 +71,8 @@ $if(lang)$
 $endif$
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\textbf{\thepage}}
 $if(natbib)$
 \usepackage{natbib}
 \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
