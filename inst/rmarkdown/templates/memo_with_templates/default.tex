@@ -4,7 +4,7 @@ $if(fontfamily)$
 \usepackage{$fontfamily$}
 $else$
 % See https://www.overleaf.com/learn/latex/Font_typefaces
-\usepackage{lmodern}
+% \usepackage{lmodern}
 % \usepackage{tgpagella}
 % \usepackage{tgdejavu} % alternative to MinionPro
 % \usepackage[utf8]{inputenc}
@@ -69,6 +69,7 @@ $if(lang)$
   \usepackage[shorthands=off,$lang$]{babel}
 \fi
 $endif$
+\usepackage{lscape}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
