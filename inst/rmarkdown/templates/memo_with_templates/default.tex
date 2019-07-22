@@ -249,6 +249,8 @@ $endif$
 $body$
 
 $if(natbib)$
+\pagebreak
+\section{References}
 $if(biblio-files)$
 $if(biblio-title)$
 $if(book-class)$
@@ -262,7 +264,6 @@ $endif$
 $endif$
 $endif$
 $if(biblatex)$
-\section{References}
 \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
 $endif$
 $for(include-after)$
