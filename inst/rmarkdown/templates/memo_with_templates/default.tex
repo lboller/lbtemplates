@@ -248,6 +248,9 @@ $if(lof)$
 $endif$
 $body$
 
+\pagebreak
+\section{References}
+
 $if(natbib)$
 $if(biblio-files)$
 $if(biblio-title)$
@@ -257,8 +260,6 @@ $else$
 \renewcommand\refname{$biblio-title$}
 $endif$
 $endif$
-\pagebreak
-\section{References}
 \bibliography{$biblio-files$}
 
 $endif$
