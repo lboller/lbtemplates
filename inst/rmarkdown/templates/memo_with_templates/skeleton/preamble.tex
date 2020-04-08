@@ -21,9 +21,11 @@
 } {
     \endorigfigure
 }
-\let\[\equation
-\let\]\endequation
+%\let\[\begin{equation}
+%\let\]\end{equation}
 \usepackage{floatrow}
+\usepackage{unicode-math}
+\usepackage{threeparttable}
 \floatsetup[figure]{capposition=top}
 \floatsetup[table]{capposition=top}
 % \makeatletter % undo the wrong changes made by mathspec
