@@ -35,7 +35,7 @@ pdf_memo = function(toc = FALSE, number_sections = TRUE, ...) {
     fig_caption = TRUE,
     includes = rmarkdown::includes(in_header = preamble),
     number_sections = number_sections,
-    pandoc_args = c("--variable", "geometry:margin=1.5in"),
+    pandoc_args = c("--variable", "geometry:margin=1.5in", "--extract-media", "."),
     latex_engine = "xelatex",
     template = system.file("rmarkdown/templates/memo_with_templates/default.tex", package = "lbtemplates"),
     ...
