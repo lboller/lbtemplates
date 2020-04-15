@@ -2,9 +2,7 @@
 title: ""
 # author: "Lysle Boller"
 # date: ""
-output:
-  lbtemplates::pdf_memo:
-    toc = "no"
+output: lbtemplates::pdf_memo
 ---
 
 ```{r setup, include = FALSE}
